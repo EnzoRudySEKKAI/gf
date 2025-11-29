@@ -70,9 +70,9 @@ const Contact = () => {
         <div className="final-message">
             <h3>To My Wonderful Yisheng,</h3>
             <p>
-                You are the most amazing person in my life. Every day with you is a gift, 
+                You are the most amazing person I have met. Every moments with you is amazing, 
                 and I cherish every moment we spend together. Thank you for being who you are, 
-                for loving me. I love you more than words can say.
+                and being with me. Love U more than words can say.
             </p>
             <p className="signature">Love U<br />Enzo Rudy SEKKAI 夏立</p>
         </div>
