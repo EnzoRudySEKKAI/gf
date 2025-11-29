@@ -1,0 +1,39 @@
+.reasons {
+  background: white;
+}
+
+.reasons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reason-card {
+  background: #ffe8e8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateX(10px);
+  background: #ffd6d6;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.reason-card p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}

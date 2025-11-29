@@ -1,0 +1,67 @@
+.countdown {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.countdown-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  min-width: 120px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e91e63;
+  display: block;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown-message {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+  .countdown-item {
+    min-width: 100px;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+}
+
+/* Add to src/components/Countdown.css */
+@media (max-width: 480px) {
+  .countdown-container {
+    gap: 1rem;
+  }
+  
+  .countdown-item {
+    min-width: 80px;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+}

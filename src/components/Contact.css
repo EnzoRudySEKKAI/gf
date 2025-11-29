@@ -1,0 +1,106 @@
+.contact {
+  background: white;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.love-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.love-form textarea {
+  padding: 1rem;
+  border: 2px solid #ffe8e8;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.love-form textarea:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+.final-message {
+  background: #ffe8e8;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.final-message h3 {
+  color: #e91e63;
+  margin-bottom: 1rem;
+}
+
+.final-message p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.signature {
+  font-style: italic;
+  color: #666;
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.name-input {
+  padding: 1rem;
+  border: 2px solid #ffe8e8;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+.cta-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-container {
+    padding: 0 10px;
+  }
+
+  .final-message {
+    padding: 1.5rem;
+  }
+}
+
+/* Add to src/components/Contact.css */
+@media (max-width: 480px) {
+  .love-form textarea,
+  .name-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .final-message {
+    padding: 1rem;
+  }
+}
