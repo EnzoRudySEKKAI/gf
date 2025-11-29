@@ -72,7 +72,7 @@ const Contact = () => {
             <p>
                 You are the most amazing person I have met. Every moments with you is amazing, 
                 and I cherish every moment we spend together. Thank you for being who you are, 
-                and being with me. Love U more than words can say.
+                and being with me.
             </p>
             <p className="signature">Love U<br />Enzo Rudy SEKKAI 夏立</p>
         </div>
