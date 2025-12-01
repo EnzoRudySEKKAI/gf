@@ -1,24 +1,31 @@
 import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import OurStory from './components/OurStory';
-//import Memories from './components/Memories';
-import Reasons from './components/Reasons';
-import Countdown from './components/Countdown';
-import NextMeetingCountdown from './components/NextMeetingCountdown';
-import Contact from './components/Contact';
+import HomePage from './pages/HomePage';
+import NextDatePage from './pages/NextDatePage';
+import ReasonsPage from './pages/ReasonsPage';
+import TimeTogetherPage from './pages/TimeTogetherPage';
+import LoveLetterPage from './pages/LoveLetterPage';
+import TicTacToePage from './pages/TicTacToePage';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Reasons />
-      <NextMeetingCountdown />
-      <Countdown />
-      <Contact />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main className="page-container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/next-date" element={<NextDatePage />} />
+            <Route path="/reasons" element={<ReasonsPage />} />
+            <Route path="/time-loving-you" element={<TimeTogetherPage />} />
+            <Route path="/love-letter" element={<LoveLetterPage />} />
+            <Route path="/tic-tac-toe" element={<TicTacToePage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

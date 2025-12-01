@@ -22,6 +22,10 @@
   font-size: 1.5rem;
 }
 
+.nav-brand a {
+  text-decoration: none;
+}
+
 .nav-menu {
   display: flex;
   gap: 2rem;
@@ -39,6 +43,10 @@
   color: #e91e63;
 }
 
+.nav-menu a.active {
+  color: #e91e63;
+}
+
 .nav-menu a::after {
   content: '';
   position: absolute;
@@ -51,6 +59,10 @@
 }
 
 .nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-menu a.active::after {
   width: 100%;
 }
 

@@ -1,0 +1,85 @@
+.tic-section {
+  gap: 1.5rem;
+}
+
+.tic-subtitle {
+  max-width: 520px;
+  margin: 0 auto 1rem;
+  color: #555;
+}
+
+.tic-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.symbol-picker {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.symbol-picker label {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.tic-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+.tic-cell {
+  border: 2px solid #e91e63;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e91e63;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tic-cell:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tic-cell:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
+}
+
+.tic-status {
+  font-weight: 600;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.tic-message {
+  color: #e91e63;
+  font-weight: 500;
+}
+
+.tic-message.warning {
+  color: #f39c12;
+}
+
+@media (max-width: 480px) {
+  .tic-board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+}
+
