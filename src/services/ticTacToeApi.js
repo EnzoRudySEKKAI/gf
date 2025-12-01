@@ -1,7 +1,7 @@
 const API_BASE_URL =
   process.env.REACT_APP_TTT_API ||
   process.env.REACT_APP_API_BASE_URL ||
-  'http://localhost:8000';
+  'https://gf-cx32.onrender.com';
 
 const jsonHeaders = {
   'Content-Type': 'application/json',
