@@ -5,7 +5,6 @@ import OurStory from '../components/OurStory';
 const HomePage = () => (
   <>
     <Hero />
-    <OurStory />
   </>
 );
 
