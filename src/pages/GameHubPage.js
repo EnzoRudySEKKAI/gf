@@ -12,7 +12,7 @@ const games = [
   {
     id: 'rock-paper-scissors',
     title: 'Rock Paper Scissors',
-    description: 'Lock in rock, paper, or scissors as Player 1 or Player 2 to see who wins.',
+    description: 'Lock in rock, paper, or scissors as Yisheng or Enzo to see who wins.',
     to: '/rock-paper-scissors',
   },
 ];
@@ -27,7 +27,6 @@ const GameHubPage = () => (
       {games.map((game) => (
         <Link key={game.id} to={game.to} className="game-card">
           <h3>{game.title}</h3>
-          <p>{game.description}</p>
           <span className="cta-link">Play now →</span>
         </Link>
       ))}

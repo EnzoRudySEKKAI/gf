@@ -6,7 +6,7 @@ const choices = ['rock', 'paper', 'scissors'];
 
 const RockPaperScissorsPage = () => {
   const [game, setGame] = useState(null);
-  const [selectedPlayer, setSelectedPlayer] = useState('player1');
+  const [selectedPlayer, setSelectedPlayer] = useState('Yisheng');
   const [selectedChoice, setSelectedChoice] = useState('rock');
   const [status, setStatus] = useState('');
   const [isBusy, setIsBusy] = useState(false);
@@ -90,8 +90,8 @@ const RockPaperScissorsPage = () => {
   const resultMessage = () => {
     if (!game) return 'Loading shared round...';
     if (game.is_draw) return 'Draw! Both players picked the same.';
-    if (game.winner === 'player1') return 'Player 1 wins this round! 🎉';
-    if (game.winner === 'player2') return 'Player 2 wins this round! 🎉';
+    if (game.winner === 'Yisheng') return 'Yisheng wins this round! 🎉';
+    if (game.winner === 'Enzo') return 'Enzo wins this round! 🎉';
     return 'Awaiting both players.';
   };
 
@@ -105,21 +105,21 @@ const RockPaperScissorsPage = () => {
             <input
               type="radio"
               name="player"
-              value="player1"
-              checked={selectedPlayer === 'player1'}
+              value="Yisheng"
+              checked={selectedPlayer === 'Yisheng'}
               onChange={(e) => setSelectedPlayer(e.target.value)}
             />
-            Player 1
+            Yisheng
           </label>
           <label>
             <input
               type="radio"
               name="player"
-              value="player2"
-              checked={selectedPlayer === 'player2'}
+              value="Enzo"
+              checked={selectedPlayer === 'Enzo'}
               onChange={(e) => setSelectedPlayer(e.target.value)}
             />
-            Player 2
+            Enzo
           </label>
         </div>
 
@@ -140,12 +140,12 @@ const RockPaperScissorsPage = () => {
 
       <div className="rps-status-card">
         <div>
-          <h4>Player 1</h4>
-          <p>{renderChoiceStatus('player1')}</p>
+          <h4>Yisheng</h4>
+          <p>{renderChoiceStatus('Yisheng')}</p>
         </div>
         <div>
-          <h4>Player 2</h4>
-          <p>{renderChoiceStatus('player2')}</p>
+          <h4>Enzo</h4>
+          <p>{renderChoiceStatus('Enzo')}</p>
         </div>
       </div>
 

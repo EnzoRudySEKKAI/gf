@@ -45,7 +45,7 @@ class MoveRequest(BaseModel):
 
 
 class RpsMoveRequest(BaseModel):
-    player: str = Field(..., pattern="^(player1|player2)$")
+    player: str = Field(..., pattern="^(Yisheng|Enzo)$")
     choice: str = Field(..., pattern="^(rock|paper|scissors)$")
 
 
@@ -60,7 +60,7 @@ def create_new_game() -> GameState:
 
 def create_rps_game() -> RpsGameState:
     return RpsGameState(
-        choices={"player1": None, "player2": None},
+        choices={"Yisheng": None, "Enzo": None},
         winner=None,
         is_draw=False,
     )
@@ -166,15 +166,15 @@ def submit_rps_choice(move: RpsMoveRequest):
 
     game.choices[move.player] = move.choice
 
-    first = game.choices["player1"]
-    second = game.choices["player2"]
+    first = game.choices["Yisheng"]
+    second = game.choices["Enzo"]
 
     if first and second:
         if first == second:
             game.is_draw = True
         else:
             wins_against = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
-            game.winner = "player1" if wins_against[first] == second else "player2"
+            game.winner = "Yisheng" if wins_against[first] == second else "Enzo"
 
     return serialize_rps(game)
 
