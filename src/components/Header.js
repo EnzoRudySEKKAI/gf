@@ -34,8 +34,8 @@ const Header = () => {
           <NavLink to="/love-letter" onClick={() => setIsMenuOpen(false)}>
             Love Letter
           </NavLink>
-          <NavLink to="/tic-tac-toe" onClick={() => setIsMenuOpen(false)}>
-            Play Tic Tac Toe
+          <NavLink to="/games" onClick={() => setIsMenuOpen(false)}>
+            Games
           </NavLink>
         </div>
 

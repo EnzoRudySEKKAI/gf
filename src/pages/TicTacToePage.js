@@ -91,21 +91,8 @@ const TicTacToePage = () => {
   return (
     <section className="tic-section section">
       <h2 className="section-title">Tic Tac Toe</h2>
-      <p className="tic-subtitle">
-        Everyone plays on the same shared board. Choose your role every turn, make a move, or reset the match to start fresh.
-      </p>
-
-      <div className="tic-controls">
-        <button className="cta-button secondary" onClick={handleReset} disabled={isBusy}>
-          Reset Game
-        </button>
-        <button className="cta-button" onClick={loadGame} disabled={isBusy}>
-          Refresh Now
-        </button>
-      </div>
 
       <div className="symbol-picker">
-        <span>Choose your role for the next move:</span>
         <label>
           <input
             type="radio"
@@ -114,7 +101,7 @@ const TicTacToePage = () => {
             checked={selectedSymbol === 'X'}
             onChange={(e) => setSelectedSymbol(e.target.value)}
           />
-          Cross (X)
+          <h2>Cross (X)</h2>
         </label>
         <label>
           <input
@@ -124,7 +111,7 @@ const TicTacToePage = () => {
             checked={selectedSymbol === 'O'}
             onChange={(e) => setSelectedSymbol(e.target.value)}
           />
-          Circle (O)
+          <h2>Circle (O)</h2>
         </label>
       </div>
 
@@ -141,9 +128,18 @@ const TicTacToePage = () => {
         ))}
       </div>
 
-      <p className="tic-status">{gameStatus()}</p>
+      <h1 className="tic-status">{gameStatus()}</h1>
       {status && <p className="tic-message">{status}</p>}
       {autoSyncError && <p className="tic-message warning">{autoSyncError}</p>}
+
+      <div className="tic-controls">
+        <button className="cta-button secondary" onClick={handleReset} disabled={isBusy}>
+          Reset Game
+        </button>
+        <button className="cta-button" onClick={loadGame} disabled={isBusy}>
+          Refresh Now
+        </button>
+      </div>
     </section>
   );
 };

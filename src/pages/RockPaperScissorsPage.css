@@ -1,0 +1,117 @@
+.rps-section {
+  gap: 1.5rem;
+}
+
+.rps-subtitle {
+  max-width: 520px;
+  margin: 0 auto 1rem;
+  color: #555;
+}
+
+.rps-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.role-picker,
+.choice-picker {
+  /* make the items bigger */
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 1.25rem;
+  display: flex;
+  /* align items in the center of the container */
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.role-picker label,
+.choice-picker label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: auto;
+  flex-wrap: wrap;
+  /* make the buttons bigger */
+  font-size: 1.2rem;
+}
+
+.choice-button {
+  font-size: 1.2rem;
+
+  border: 2px solid #e91e63;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: #e91e63;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.choice-button.active,
+.choice-button:hover {
+  background: #e91e63;
+  color: white;
+}
+
+.rps-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-button.ghost {
+  background: transparent;
+  border: 2px solid #e91e63;
+  color: #e91e63;
+}
+
+.rps-status-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.rps-status-card h4 {
+  color: #e91e63;
+  margin-bottom: 0.25rem;
+}
+
+.rps-result {
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .choice-buttons {
+    flex-direction: column;
+  }
+
+  .choice-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+

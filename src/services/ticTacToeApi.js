@@ -38,3 +38,25 @@ export async function makeMove(player, index) {
   return handleResponse(res);
 }
 
+export async function fetchRpsGame() {
+  const res = await fetch(`${API_BASE_URL}/rps`);
+  return handleResponse(res);
+}
+
+export async function resetRpsGame() {
+  const res = await fetch(`${API_BASE_URL}/rps/reset`, {
+    method: 'POST',
+    headers: jsonHeaders,
+  });
+  return handleResponse(res);
+}
+
+export async function submitRpsChoice(player, choice) {
+  const res = await fetch(`${API_BASE_URL}/rps/choice`, {
+    method: 'POST',
+    headers: jsonHeaders,
+    body: JSON.stringify({ player, choice }),
+  });
+  return handleResponse(res);
+}
+

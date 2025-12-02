@@ -8,6 +8,8 @@ import ReasonsPage from './pages/ReasonsPage';
 import TimeTogetherPage from './pages/TimeTogetherPage';
 import LoveLetterPage from './pages/LoveLetterPage';
 import TicTacToePage from './pages/TicTacToePage';
+import GameHubPage from './pages/GameHubPage';
+import RockPaperScissorsPage from './pages/RockPaperScissorsPage';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/time-loving-you" element={<TimeTogetherPage />} />
             <Route path="/love-letter" element={<LoveLetterPage />} />
             <Route path="/tic-tac-toe" element={<TicTacToePage />} />
+            <Route path="/games" element={<GameHubPage />} />
+            <Route path="/rock-paper-scissors" element={<RockPaperScissorsPage />} />
           </Routes>
         </main>
       </div>
