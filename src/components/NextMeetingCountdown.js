@@ -3,10 +3,10 @@ import './NextMeetingCountdown.css';
 
 const NextMeetingCountdown = () => {
   // Set your next meeting date here (format: YYYY-MM-DDTHH:MM:SS)
-  const [nextMeetingDate, setNextMeetingDate] = useState('2025-12-05T06:00:00');
+  const [nextMeetingDate, setNextMeetingDate] = useState('2026-02-06T06:00:00');
   const [isEditing, setIsEditing] = useState(false);
   const [tempDate, setTempDate] = useState('');
-  
+
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -62,7 +62,7 @@ const NextMeetingCountdown = () => {
     <section id="next-meeting" className="next-meeting section">
       <div className="container">
         <h2 className="section-title">Time Until We See Each Others Again</h2>
-        
+
         <div className="meeting-info">
           <div className="meeting-date">
             {isEditing ? (
@@ -79,17 +79,17 @@ const NextMeetingCountdown = () => {
             ) : (
               <div className="date-display">
                 <p className="display-date">
-                  {meetingDate.toLocaleDateString('en-US', { 
-                    weekday: 'long', 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
+                  {meetingDate.toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
                   })}
                 </p>
                 <p className="display-time">
-                  at {meetingDate.toLocaleTimeString('en-US', { 
-                    hour: '2-digit', 
-                    minute: '2-digit' 
+                  at {meetingDate.toLocaleTimeString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit'
                   })}
                 </p>
               </div>
