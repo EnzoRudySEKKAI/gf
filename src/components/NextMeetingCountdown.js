@@ -3,7 +3,7 @@ import './NextMeetingCountdown.css';
 
 const NextMeetingCountdown = () => {
   // Set your next meeting date here (format: YYYY-MM-DDTHH:MM:SS)
-  const [nextMeetingDate, setNextMeetingDate] = useState('2026-02-06T06:00:00');
+  const [nextMeetingDate, setNextMeetingDate] = useState('2026-02-07T06:00:00');
   const [isEditing, setIsEditing] = useState(false);
   const [tempDate, setTempDate] = useState('');
 
